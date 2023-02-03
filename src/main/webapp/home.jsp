@@ -44,10 +44,10 @@
 				class="d-flex ml-auto flex-column flex-lg-row align-items-center">
 				<ul class="navbar-nav">
 					<li class="nav-item"><a class="nav-link" href="index.html"><span
-							class="fa fa-home"></span> Home</a></li>
+							class="fa fa-home"></span>Home</a></li>
 					<li class="nav-item" id="navUser"><a class="nav-link" href="#"
 						data-toggle="modal" data-target="#loginForm"><span
-							class="fa-sharp fa-solid fa-right-to-bracket"></span> Login</a></li>
+							class="fa-sharp fa-solid fa-right-to-bracket"></span>Login</a></li>
 				</ul>
 			</div>
 		</div>
