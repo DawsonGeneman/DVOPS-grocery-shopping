@@ -210,3 +210,13 @@ footer {
   color: #E5DCCA;
   font-family: 'Roboto Slab', sans-serif;
 }
+
+.footer-header {
+  margin-left: 50px;
+  font-size: 20px;
+}
+
+.footer-link:hover {
+  color: #E5DCCA;
+
+}
