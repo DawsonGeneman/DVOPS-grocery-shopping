@@ -49,7 +49,7 @@
 							class="fa fa-shopping-basket"></span>Products</a></li>
 					<li class="nav-item"><a class="nav-link" href="index.html"><span
 							class="fa fa-phone"></span>Contact Us</a></li>
-					<li class="nav-item" style="margin-right:40em;"><a class="nav-link" href="index.html"><span
+					<li class="nav-item" style="margin-right:45em;"><a class="nav-link" href="index.html"><span
 							class="fa fa-info-circle"></span>About Us</a></li>
 					<li class="nav-item" id="navUser"><a class="nav-link" href="#"
 						data-toggle="modal" data-target="#loginForm"><span
