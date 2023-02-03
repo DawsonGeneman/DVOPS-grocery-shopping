@@ -53,6 +53,7 @@
 		</div>
 	</nav>
 
+  <div w3-include-html="footer.html"></div>
 
 </body>
 </html>
