@@ -45,6 +45,12 @@
 				<ul class="navbar-nav">
 					<li class="nav-item"><a class="nav-link" href="index.html"><span
 							class="fa fa-home"></span>Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="index.html"><span
+							class="fa fa-home"></span>Products</a></li>
+					<li class="nav-item"><a class="nav-link" href="index.html"><span
+							class="fa fa-home"></span>Contact Us</a></li>
+					<li class="nav-item"><a class="nav-link" href="index.html"><span
+							class="fa fa-home"></span>About Us</a></li>
 					<li class="nav-item" id="navUser"><a class="nav-link" href="#"
 						data-toggle="modal" data-target="#loginForm"><span
 							class="fa-sharp fa-solid fa-right-to-bracket"></span>Login</a></li>
@@ -53,11 +59,13 @@
 		</div>
 	</nav>
 
- <div w3-include-html="footer.jsp"></div>
+	<div w3-include-html="footer.jsp"></div>
 
-  <script src="https://www.w3schools.com/lib/w3.js"></script>
-  <!--to bring in other HTML on the fly into this page -->
-  <script>w3.includeHTML();</script>
+	<script src="https://www.w3schools.com/lib/w3.js"></script>
+	<!--to bring in other HTML on the fly into this page -->
+	<script>
+		w3.includeHTML();
+	</script>
 </body>
 
 </body>
