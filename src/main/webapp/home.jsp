@@ -60,6 +60,12 @@
 		</div>
 	</nav>
 	
+	<div class="container" style="color: black;">
+	
+	<h1> this is the first page</h1>
+	<p1> this is the first page </p1>
+	</div>
+	
 	
 
 	<div w3-include-html="footer.jsp"></div>
