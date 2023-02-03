@@ -131,7 +131,7 @@
       <div class="modal-body">
 		<div class="row">
 			<div class="col-sm">
-				<form>
+				<form action="RegisterServlet" method="post">
 					<div class="form-group">
 						<label>Name</label>
 						<input type="text" class="form-control" id="name">
@@ -155,7 +155,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-warning" onclick="register()">Register</button>
+        <button type="submit" class="btn btn-warning" value="Call Servlet">Register</button>
       </div>
     </div>
   </div>
