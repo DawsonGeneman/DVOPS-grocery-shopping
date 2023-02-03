@@ -144,7 +144,7 @@
 						<label>Email</label>
 						<input type="email" class="form-control" id="email">
 					</div>
-					<input type="submit" class="btn btn-warning" value="Call Servlet">Register</button>
+					<input type="submit" class="btn btn-warning" value="Register"></input>
 				</form>
 			</div>
 		</div>
