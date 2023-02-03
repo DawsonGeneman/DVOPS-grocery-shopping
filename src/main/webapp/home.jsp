@@ -60,10 +60,8 @@
 		</div>
 	</nav>
 	
-	<div class="container" style="color: black;">
+	<div class="bgimg">
 	
-	<h1> this is the first page</h1>
-	<p1> this is the first page </p1>
 	</div>
 	
 	
