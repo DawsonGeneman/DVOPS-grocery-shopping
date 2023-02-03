@@ -46,11 +46,11 @@
 					<li class="nav-item"><a class="nav-link" href="index.html"><span
 							class="fa fa-home"></span>Home</a></li>
 					<li class="nav-item"><a class="nav-link" href="index.html"><span
-							class="fa fa-home"></span>Products</a></li>
+							class="fa fa-shopping-basket"></span>Products</a></li>
 					<li class="nav-item"><a class="nav-link" href="index.html"><span
-							class="fa fa-home"></span>Contact Us</a></li>
-					<li class="nav-item"><a class="nav-link" href="index.html"><span
-							class="fa fa-home"></span>About Us</a></li>
+							class="fa fa-phone"></span>Contact Us</a></li>
+					<li class="nav-item" style="margin-right: 20px;"><a class="nav-link" href="index.html"><span
+							class="fa fa-info-circle"></span>About Us</a></li>
 					<li class="nav-item" id="navUser"><a class="nav-link" href="#"
 						data-toggle="modal" data-target="#loginForm"><span
 							class="fa-sharp fa-solid fa-right-to-bracket"></span>Login</a></li>
