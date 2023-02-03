@@ -12,9 +12,10 @@
 <body>
 	
 <h1>Grocery store</h1>
-<a href="home.jsp">
-            <button class="btn btn-primary btn-lg">Click</button>
-        </a>
+
+            <button class="btn btn-primary btn-lg" href="login.jsp">login</button>
+            <button class="btn btn-primary btn-lg" href="register.jsp">Register</button>
+
 
 
 </body>
