@@ -133,50 +133,16 @@
 			<div class="col-sm">
 				<form>
 					<div class="form-group">
-						<label>NRIC</label>
-						<input type="text" class="form-control" id="nric">
-					</div>
-					<div class="form-group">
-						<label>Full Name</label>
-						<input type="text" class="form-control" id="fullname">
-					</div>
-					<div class="form-group">
-						<label>Email</label>
-						<input type="email" class="form-control" id="email">
-					</div>
-					<div class="form-group">
-						<label>Contact No.</label>
-						<input type="number" class="form-control" id="contactno">
-					</div>
-					<div class="form-group">
-						<label>Date of Birth</label>
-						<input type="date" class="form-control" id="dob">
-					</div>
-					<div class="form-group">
-						<label>Gender</label>
-						<div class="form-check"><input type="radio" class="form-check-input" id="genderMale" name="gender" checked> Male</div>
-						<div class="form-check"><input type="radio" class="form-check-input" id="genderFemale" name="gender"> Female</div>
-					</div>
-					<div class="form-group">
-						<label>Highest Qualification</label>
-						<select class="form-control form-select" id="qualification">
-						  <option value="Postgraduate">Postgraduate</option>
-						  <option value="Degree">Degree</option>
-						  <option value="Diploma">Diploma</option>
-						  <option value="HNitec/ Nitec">HNitec/ Nitec</option>
-						  <option value="A Levels">A Levels</option>
-						  <option value="O Levels">O Levels</option>
-						  <option value="N Levels">N Levels</option>
-						  <option value="Others">Others</option>
-						</select>
+						<label>Name</label>
+						<input type="text" class="form-control" id="name">
 					</div>
 					<div class="form-group">
 						<label>Password</label>
 						<input type="password" class="form-control" id="password">
 					</div>
 					<div class="form-group">
-						<label>Confirm Password</label>
-						<input type="password" class="form-control" id="confirm-password">
+						<label>Email</label>
+						<input type="email" class="form-control" id="email">
 					</div>
 				</form>
 			</div>
