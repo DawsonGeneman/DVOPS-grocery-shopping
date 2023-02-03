@@ -202,3 +202,11 @@ a:hover {
 	background-color: #000000;
 	color: #ffffff;
 }
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #4A2F28;
+  color: #E5DCCA;
+  font-family: 'Roboto Slab', sans-serif;
+}
