@@ -219,7 +219,7 @@ footer {
 	background-image: url("https://media.timeout.com/images/105790644/750/562/image.jpg");
 	background-size: cover;
 	height: 40em;
-	width: 100%
+	width: 100em
 }
 
 .title {
@@ -227,6 +227,7 @@ footer {
   flex-direction: column;
   height: 100%;
   width: 100%;
+  font-size: 100px;
   justify-content: center;
   align-items: center;
   color: white;
