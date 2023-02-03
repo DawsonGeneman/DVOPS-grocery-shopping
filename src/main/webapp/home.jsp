@@ -144,6 +144,7 @@
 						<label>Email</label>
 						<input type="email" class="form-control" id="email">
 					</div>
+					<input type="submit" class="btn btn-warning" value="Call Servlet">Register</button>
 				</form>
 			</div>
 		</div>
@@ -155,7 +156,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-warning" value="Call Servlet">Register</button>
+        
       </div>
     </div>
   </div>
