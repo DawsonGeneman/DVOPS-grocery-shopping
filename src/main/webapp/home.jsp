@@ -75,6 +75,49 @@
 	</script>
 </body>
 
+<!-- Login Modal -->
+<div class="modal fade" id="loginForm" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title">Login </h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		<div class="row">
+			<div class="col-sm">
+				<form>
+					<div class="form-group">
+						<label id="loginLabelID">NRIC</label>
+						<input type="email" class="form-control" id="loginID">
+					</div>
+					<div class="form-group">
+						<label>Password</label>
+						<input type="password" class="form-control" id="loginPassword">
+					</div>
+					<div class="form-check">
+						<input type="checkbox" class="form-check-input" id="exampleCheck1" onclick="toggleRole()">
+						<label class="form-check-label" for="exampleCheck1">Login as company</label>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm">
+				<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#registerForm">Not a user? Register here.</a>
+			</div>
+		</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-warning" onclick="login()">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <div class="modal fade" id="registerForm" tabindex="-1" role="dialog">
   <div class="modal-dialog modal-dialog-scrollable" role="document">
