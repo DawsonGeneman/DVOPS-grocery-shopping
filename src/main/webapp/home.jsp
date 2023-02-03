@@ -54,8 +54,7 @@
 					<li class="nav-item" id="navUser"><a class="nav-link" href="#"
 						data-toggle="modal" data-target="#loginForm"><span
 							class="fa-sharp fa-solid fa-right-to-bracket"></span>Login</a></li>
-							<li class="nav-item" style="margin-right:43em;"><a class="nav-link" href="aboutus.jsp"><span
-							class="fa fa-info-circle"></span>Fuck challenger</a></li>
+							
 				</ul>
 			</div>
 		</div>
