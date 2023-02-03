@@ -43,13 +43,13 @@
 			<div
 				class="d-flex ml-auto flex-column flex-lg-row align-items-center">
 				<ul class="navbar-nav">
-					<li class="nav-item"><a class="nav-link" href="index.html"><span
+					<li class="nav-item"><a class="nav-link" href="home.jsp"><span
 							class="fa fa-home"></span>Home</a></li>
-					<li class="nav-item"><a class="nav-link" href="index.html"><span
+					<li class="nav-item"><a class="nav-link" href="products.jsp"><span
 							class="fa fa-shopping-basket"></span>Products</a></li>
-					<li class="nav-item"><a class="nav-link" href="index.html"><span
+					<li class="nav-item"><a class="nav-link" href="contactUs.jsp"><span
 							class="fa fa-phone"></span>Contact Us</a></li>
-					<li class="nav-item" style="margin-right:43em;"><a class="nav-link" href="index.html"><span
+					<li class="nav-item" style="margin-right:43em;"><a class="nav-link" href="aboutus.jsp"><span
 							class="fa fa-info-circle"></span>About Us</a></li>
 					<li class="nav-item" id="navUser"><a class="nav-link" href="#"
 						data-toggle="modal" data-target="#loginForm"><span
