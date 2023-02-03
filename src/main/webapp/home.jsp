@@ -61,7 +61,7 @@
 	</nav>
 	
 	<div class="bgimg">
-	d
+	<h1>Gordon's Grocery Store</h1>
 	</div>
 	
 	
