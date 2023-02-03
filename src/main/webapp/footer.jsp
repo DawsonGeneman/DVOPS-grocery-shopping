@@ -2,9 +2,7 @@
   <div class="row">
     <div class="col-1 link-column">
       <b class="footer-header">SuiteSpoon</b>
-      <a href="homepage.html" class="footer-link" style="color: white;">
-      Home
-      </a>
+      <p>Home</p>
       <p>Search</p>
       <p>About Us</p>
     </div>
