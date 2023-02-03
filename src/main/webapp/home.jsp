@@ -26,11 +26,9 @@
 	href="https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700&display=swap"
 	rel="stylesheet">
 
-<link href="css/style.css" rel="stylesheet" />
-<script src="js/common.js"></script>
+<link href="style.css" rel="stylesheet" />
+<script src="common.js"></script>
 <script src="js/ms1-users.js"></script>
-<script src="js/ms2-companies-jobs.js"></script>
-<script src="js/ms3-applications.js"></script>
 </head>
 
 <body onload="setNavBar();">
@@ -56,25 +54,5 @@
 	</nav>
 
 
-	<!-- Header image -->
-	<div
-		style="height: auto; background-image: url('https://media.timeout.com/images/105790644/750/562/image.jpg'); background-size: cover"
-		class="w3-display-container w3-grayscale-min">
-		<div class="w3-display-bottomleft">
-			<span class="w3-tag w3-xlarge">Open from 10am to 12pm</span>
-		</div>
-		<div class="w3-display-middle w3-center">
-			<span class="w3-text-white" style="font-size: 100px">GORDON'S<br>GROCERY
-				STORE
-			</span>
-			<p>
-				<a href="products.jsp" class="w3-button w3-xxlarge w3-black">Products
-					Availableeeee</a>
-			</p>
-		</div>
-	</div>
-
-	<!-- End Content -->
-	</div>
 </body>
 </html>
