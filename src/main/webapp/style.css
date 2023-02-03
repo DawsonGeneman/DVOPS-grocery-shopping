@@ -216,5 +216,7 @@ footer {
 }
 
 .bgimg{
-	background-image: url("https://media.timeout.com/images/105790644/750/562/image.jpg")
+	background-image: url("https://media.timeout.com/images/105790644/750/562/image.jpg");
+	height: auto;
+	width: 100%
 }
