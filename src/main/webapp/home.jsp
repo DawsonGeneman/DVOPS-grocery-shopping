@@ -55,6 +55,9 @@
 					<li class="nav-item" id="navUser"><a class="nav-link" href="#"
 						data-toggle="modal" data-target="#loginForm"><span
 							class="fa-sharp fa-solid fa-right-to-bracket"></span>Login</a></li>
+							<li class="nav-item" style="margin-right: 33em;"><a
+						class="nav-link" href="userManagement.jsp"><span
+							class="fa fa-info-circle"></span>Manage Users</a></li>
 					<li class="nav-item" id="navUser"><a class="nav-link" href="index.jsp"
 						><span
 							class="fa-sharp fa-solid fa-arrow-left"></span>Back</a></li>
