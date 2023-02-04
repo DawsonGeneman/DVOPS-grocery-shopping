@@ -114,9 +114,7 @@ public class UserServlet extends HttpServlet {
 
 			}
 
-		} catch (
-
-		SQLException ex) {
+		} catch (SQLException ex) {
 			throw new ServletException(ex);
 		}
 
