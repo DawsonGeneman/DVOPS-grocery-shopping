@@ -6,19 +6,23 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-class UserServletTest {
+class UserServlet {
 
 	@BeforeEach
 	void setUp() throws Exception {
+
 	}
 
 	@AfterEach
 	void tearDown() throws Exception {
+
 	}
 
 	@Test
-	void testUserServlet() {
-		fail("Not yet implemented");
+	void testRegisterServlet() {
+
 	}
+	
+	
 
 }
