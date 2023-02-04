@@ -13,8 +13,8 @@
 	
 <h1>Grocery store</h1>
 
-            <button class="btn btn-primary btn-lg" href="login.jsp">login</button>
-            <button class="btn btn-primary btn-lg" href="register.jsp">Register</button>
+            <button class="btn btn-primary btn-lg" onclick="window.location.href = 'login.jsp';">login</button>
+            <button class="btn btn-primary btn-lg" onclick="window.location.href = 'register.jsp';">Register</button>
 
 
 
