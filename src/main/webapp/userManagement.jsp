@@ -20,8 +20,7 @@
 			<div class="container text-left">
 				<!-- Add new user button redirects to the register.jsp page -->
 				<a href="<%=request.getContextPath()%>/register.jsp"
-					class="btn btn-
-success">Add New User</a>
+					class="btn btn-success">Add New User</a>
 			</div>
 			<br>
 			<!-- Create a tablde to list out all current users information -->
