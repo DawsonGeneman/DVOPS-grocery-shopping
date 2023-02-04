@@ -187,7 +187,7 @@ li a:hover {
 		<li><a href="aboutus.jsp">About Us</a></li>
 	</ul>
 
-	<h1>Our Products</h1>
+	<h1>not ouer Products</h1>
 	<div class="gallery">
 
 		<div class="content">
