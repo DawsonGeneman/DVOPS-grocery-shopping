@@ -7,7 +7,25 @@
 	<name>projectfile</name>
 	<description>final project</description>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.complier.source>1.8</maven.complier.source>
+		<maven.complier.target>1.8</maven.complier.target>
+
+		<junit-jupiter.groupId>org.junit.jupiter</junit-jupiter.groupId>
+		<junit-jupiter.artifactId>junit-jupiter</junit-jupiter.artifactId>
+		<junit-jupiter.version>5.7.0</junit-jupiter.version>
+	</properties>
+
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>5.7.0</version>
+			<scope>test</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
@@ -32,6 +50,7 @@
 			<version>1.2</version>
 		</dependency>
 
+
 	</dependencies>
 
 	<build>
@@ -49,4 +68,5 @@
 			</plugin>
 		</plugins>
 	</build>
+
 </project>
