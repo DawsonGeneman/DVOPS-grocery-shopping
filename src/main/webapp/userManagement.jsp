@@ -43,8 +43,7 @@
 							<td><c:out value="${user.password}" /></td>
 							<td><c:out value="${user.email}" /></td>
 							<!-- For each user in the database, Edit/Delete buttons which invokes the edit/delete functions -->
-							<td><a href="edit?name=<c:out value='${user.name}'
-/>">Edit</a>
+							<td><a href="edit?name=<c:out value='${user.name}'/>">Edit</a>
 								&nbsp;&nbsp;&nbsp;&nbsp; <a
 								href="delete?name=<c:out value='${user.name}'/>">Delete</a></td>
 						</tr>
