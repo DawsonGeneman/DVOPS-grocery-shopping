@@ -134,17 +134,18 @@
 				<form action="RegisterServlet" method="post">
 					<div class="form-group">
 						<label>Name</label>
-						<input type="text" class="form-control" id="name">
+						<input type="text" class="form-control" id="name" name="userName">
 					</div>
 					<div class="form-group">
 						<label>Password</label>
-						<input type="password" class="form-control" id="password">
+						<input type="password" class="form-control" id="password" name="password">
 					</div>
 					<div class="form-group">
 						<label>Email</label>
-						<input type="email" class="form-control" id="email">
+						<input type="email" class="form-control" id="email" name="email">
 					</div>
-					<input type="submit" class="btn btn-warning" value="Register"></input>
+					<button type="submit" class="signupbtn" value="Call Servlet">Sign
+					Up</button>
 				</form>
 			</div>
 		</div>
