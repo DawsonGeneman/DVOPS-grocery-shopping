@@ -40,31 +40,31 @@ public class UserServlet extends HttpServlet {
 	// Step 5: listUsers function to connect to the database and retrieve all users
 	// records
 	private void listUsers(HttpServletRequest request, HttpServletResponse response)
-				throws SQLException, IOException, ServletException {
-			List<User> users = new ArrayList<>();
-			try (Connection connection = getConnection();
+			throws SQLException, IOException, ServletException {
+		List<User> users = new ArrayList<>();
+		try (Connection connection = getConnection();
 
-					// Step 5.1: Create a statement using connection object
-					PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);) 
-			{
+				// Step 5.1: Create a statement using connection object
+				PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);) {
 
-				// Step 5.2: Execute the query or update query
-				ResultSet rs = preparedStatement.executeQuery();
-				
-				// Step 5.3: Process the ResultSet object.
-				while (rs.next()) {
+			// Step 5.2: Execute the query or update query
+			ResultSet rs = preparedStatement.executeQuery();
+
+			// Step 5.3: Process the ResultSet object.
+			while (rs.next()) {
 				String name = rs.getString("name");
 				String password = rs.getString("password");
 				String email = rs.getString("email");
 				users.add(new User(name, password, email));
-				}
-				} catch (SQLException e) {
-				System.out.println(e.getMessage());
-				}
-			// Step 5.4: Set the users list into the listUsers attribute to be pass to the userManagement.jsp
-			request.setAttribute("listUsers", users);
-			request.getRequestDispatcher("/userManagement.jsp").forward(request, response);
 			}
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+		// Step 5.4: Set the users list into the listUsers attribute to be pass to the
+		// userManagement.jsp
+		request.setAttribute("listUsers", users);
+		request.getRequestDispatcher("/userManagement.jsp").forward(request, response);
+	}
 
 	// Step 3: Implement the getConnection method which facilitates connection to
 	// the database via JDBC
@@ -100,23 +100,20 @@ public class UserServlet extends HttpServlet {
 		String action = request.getServletPath();
 		try {
 			switch (action) {
-			case "/insert":
+			case "/UserServlet/delete":
+//				deleteUser(request, response);
 				break;
-			case "/delete":
+			case "/UserServlet/edit":
+//				showEditForm(request, response);
 				break;
-			case "/edit":
+			case "/UserServlet/update":
+//				updateUser(request, response);
 				break;
-			case "/update":
-				break;
-			default:
+			case "/UserServlet/dashboard":
 				listUsers(request, response);
 				break;
-
 			}
-
-		} catch (
-
-		SQLException ex) {
+		} catch (SQLException ex) {
 			throw new ServletException(ex);
 		}
 
