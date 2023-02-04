@@ -49,22 +49,25 @@
 							class="fa fa-shopping-basket"></span>Products</a></li>
 					<li class="nav-item"><a class="nav-link" href="contactUs.jsp"><span
 							class="fa fa-phone"></span>Contact Us</a></li>
-					<li class="nav-item" style="margin-right:42em;"><a class="nav-link" href="aboutus.jsp"><span
+					<li class="nav-item" style="margin-right: 42em;"><a
+						class="nav-link" href="aboutus.jsp"><span
 							class="fa fa-info-circle"></span>About Us</a></li>
 					<li class="nav-item" id="navUser"><a class="nav-link" href="#"
 						data-toggle="modal" data-target="#loginForm"><span
 							class="fa-sharp fa-solid fa-right-to-bracket"></span>Login</a></li>
-							
+					<li class="nav-item" id="navUser"><a class="nav-link" href="#"
+						data-toggle="modal" data-target="#loginForm"><span
+							class="fa-sharp fa-solid fa-arrow-left"></span>Back</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-	
+
 	<div class="bgimg">
-	<p class="title">Gordon's Grocery Store</p>
+		<p class="title">Gordon's Grocery Store</p>
 	</div>
-	
-	
+
+
 
 	<div w3-include-html="footer.jsp"></div>
 
@@ -77,89 +80,96 @@
 
 <!-- Login Modal -->
 <div class="modal fade" id="loginForm" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title">Login </h2>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-		<div class="row">
-			<div class="col-sm">
-				<form>
-					<div class="form-group">
-						<label id="loginLabelID">NRIC</label>
-						<input type="email" class="form-control" id="loginID">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="modal-title">Login</h2>
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-sm">
+						<form>
+							<div class="form-group">
+								<label id="loginLabelID">NRIC</label> <input type="email"
+									class="form-control" id="loginID">
+							</div>
+							<div class="form-group">
+								<label>Password</label> <input type="password"
+									class="form-control" id="loginPassword">
+							</div>
+							<div class="form-check">
+								<input type="checkbox" class="form-check-input"
+									id="exampleCheck1" onclick="toggleRole()"> <label
+									class="form-check-label" for="exampleCheck1">Login as
+									company</label>
+							</div>
+						</form>
 					</div>
-					<div class="form-group">
-						<label>Password</label>
-						<input type="password" class="form-control" id="loginPassword">
+				</div>
+				<div class="row">
+					<div class="col-sm">
+						<a href="#" data-dismiss="modal" data-toggle="modal"
+							data-target="#registerForm">Not a user? Register here.</a>
 					</div>
-					<div class="form-check">
-						<input type="checkbox" class="form-check-input" id="exampleCheck1" onclick="toggleRole()">
-						<label class="form-check-label" for="exampleCheck1">Login as company</label>
-					</div>
-				</form>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-warning" onclick="login()">Login</button>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-sm">
-				<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#registerForm">Not a user? Register here.</a>
-			</div>
-		</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-warning" onclick="login()">Login</button>
-      </div>
-    </div>
-  </div>
+	</div>
 </div>
 
 
 <div class="modal fade" id="registerForm" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-dialog-scrollable" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="modal-title">Register </h2>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-		<div class="row">
-			<div class="col-sm">
-				<form action="RegisterServlet" method="post">
-					<div class="form-group">
-						<label>Name</label>
-						<input type="text" class="form-control" id="name" name="userName">
+	<div class="modal-dialog modal-dialog-scrollable" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="modal-title">Register</h2>
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="row">
+					<div class="col-sm">
+						<form action="RegisterServlet" method="post">
+							<div class="form-group">
+								<label>Name</label> <input type="text" class="form-control"
+									id="name" name="userName">
+							</div>
+							<div class="form-group">
+								<label>Password</label> <input type="password"
+									class="form-control" id="password" name="password">
+							</div>
+							<div class="form-group">
+								<label>Email</label> <input type="email" class="form-control"
+									id="email" name="email">
+							</div>
+							<button type="submit" class="signupbtn" value="Call Servlet">Sign
+								Up</button>
+						</form>
 					</div>
-					<div class="form-group">
-						<label>Password</label>
-						<input type="password" class="form-control" id="password" name="password">
+				</div>
+				<div class="row">
+					<div class="col-sm">
+						<a href="#" data-dismiss="modal" data-toggle="modal"
+							data-target="#loginForm">Already a user? Login here.</a>
 					</div>
-					<div class="form-group">
-						<label>Email</label>
-						<input type="email" class="form-control" id="email" name="email">
-					</div>
-					<button type="submit" class="signupbtn" value="Call Servlet">Sign Up</button>
-				</form>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-sm">
-				<a href="#" data-dismiss="modal" data-toggle="modal" data-target="#loginForm">Already a user? Login here.</a>
-			</div>
-		</div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
-        
-      </div>
-    </div>
-  </div>
+	</div>
 </div>
 
 </html>
