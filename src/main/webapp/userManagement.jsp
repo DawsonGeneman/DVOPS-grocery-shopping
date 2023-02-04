@@ -37,14 +37,12 @@
 -->
 				<tbody>
 					<c:forEach var="user" items="${listUsers}">
-						<!-- For each user in the database, display their
-information accordingly -->
+						<!-- For each user in the database, display their information accordingly -->
 						<tr>
 							<td><c:out value="${user.name}" /></td>
 							<td><c:out value="${user.password}" /></td>
 							<td><c:out value="${user.email}" /></td>
-							<!-- For each user in the database, Edit/Delete
-buttons which invokes the edit/delete functions -->
+							<!-- For each user in the database, Edit/Delete buttons which invokes the edit/delete functions -->
 							<td><a href="edit?name=<c:out value='${user.name}'
 />">Edit</a>
 								&nbsp;&nbsp;&nbsp;&nbsp; <a
