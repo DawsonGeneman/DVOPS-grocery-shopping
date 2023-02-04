@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-1 link-column">
       <b class="footer-header">SuiteSpoon</b>
-      <p>Home</p>
+      <p>Homes</p>
       <p>Search</p>
       <p>About Us</p>
     </div>
