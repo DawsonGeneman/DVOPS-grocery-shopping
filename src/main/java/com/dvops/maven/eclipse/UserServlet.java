@@ -104,7 +104,7 @@ public class UserServlet extends HttpServlet {
 //				deleteUser(request, response);
 				break;
 			case "/UserServlet/edit":
-//				showEditForm(request, response);
+				showEditForm(request, response);
 				break;
 			case "/UserServlet/update":
 //				updateUser(request, response);
@@ -116,10 +116,43 @@ public class UserServlet extends HttpServlet {
 		} catch (SQLException ex) {
 			throw new ServletException(ex);
 		}
+		
+		
 
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
+	
+	private void showEditForm(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, ServletException, IOException {
+		// get parameter passed in the URL
+		String name = request.getParameter("name");
+		User existingUser = new User("", "", "");
+		// Step 1: Establishing a Connection
+		try (Connection connection = getConnection();
+				// Step 2:Create a statement using connection object
+				PreparedStatement preparedStatement = connection.prepareStatement(SELECT_USER_BY_ID);) {
+			preparedStatement.setString(1, name);
+			// Step 3: Execute the query or update query
+			ResultSet rs = preparedStatement.executeQuery();
+			// Step 4: Process the ResultSet object
+			while (rs.next()) {
+				name = rs.getString("name");
+				String password = rs.getString("password");
+				String email = rs.getString("email");
+				existingUser = new User(name, password, email);
+			}
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+		// Step 5: Set existingUser to request and serve up the userEdit form
+		request.setAttribute("user", existingUser);
+		request.getRequestDispatcher("/userEdit.jsp").forward(request, response);
+	}
+
+	// method to get parameter, query database for existing user data and redirect
+	// to user edit page
+
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
@@ -130,5 +163,9 @@ public class UserServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}
+	
+	
 
 }
+
+
