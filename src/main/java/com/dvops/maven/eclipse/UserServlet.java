@@ -27,44 +27,14 @@ public class UserServlet extends HttpServlet {
 	private String jdbcURL = "jdbc:mysql://localhost:3306/userdetails";
 	private String jdbcUsername = "root";
 	private String jdbcPassword = "password";
-
 	// Step 2: Prepare list of SQL prepared statements to perform CRUD to our
 	// database
-	private static final String INSERT_USERS_SQL = "INSERT INTO UserDetails" + " (name, password, email) VALUES "
+	private static final String INSERT_USERS_SQL = "INSERT INTO UserDetails" + " (name, password, email, ) VALUES "
 			+ " (?, ?, ?);";
 	private static final String SELECT_USER_BY_ID = "select name,password,email,language from UserDetails where name =?";
 	private static final String SELECT_ALL_USERS = "select * from UserDetails ";
 	private static final String DELETE_USERS_SQL = "delete from UserDetails where name = ?;";
 	private static final String UPDATE_USERS_SQL = "update UserDetails set name = ?,password= ?, email =? where name = ?;";
-
-	// Step 5: listUsers function to connect to the database and retrieve all users
-	// records
-	private void listUsers(HttpServletRequest request, HttpServletResponse response)
-				throws SQLException, IOException, ServletException {
-			List<User> users = new ArrayList<>();
-			try (Connection connection = getConnection();
-
-					// Step 5.1: Create a statement using connection object
-					PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);) 
-			{
-
-				// Step 5.2: Execute the query or update query
-				ResultSet rs = preparedStatement.executeQuery();
-				
-				// Step 5.3: Process the ResultSet object.
-				while (rs.next()) {
-				String name = rs.getString("name");
-				String password = rs.getString("password");
-				String email = rs.getString("email");
-				users.add(new User(name, password, email));
-				}
-				} catch (SQLException e) {
-				System.out.println(e.getMessage());
-				}
-			// Step 5.4: Set the users list into the listUsers attribute to be pass to the userManagement.jsp
-			request.setAttribute("listUsers", users);
-			request.getRequestDispatcher("/userManagement.jsp").forward(request, response);
-			}
 
 	// Step 3: Implement the getConnection method which facilitates connection to
 	// the database via JDBC
@@ -89,10 +59,6 @@ public class UserServlet extends HttpServlet {
 		// TODO Auto-generated constructor stub
 	}
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// Step 4: Depending on the request servlet path, determine the function to
@@ -111,15 +77,36 @@ public class UserServlet extends HttpServlet {
 			default:
 				listUsers(request, response);
 				break;
-
 			}
-
 		} catch (SQLException ex) {
 			throw new ServletException(ex);
 		}
+	}
 
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+	// Step 5: listUsers function to connect to the database and retrieve all users
+	// records
+	private void listUsers(HttpServletRequest request, HttpServletResponse response)
+			throws SQLException, IOException, ServletException {
+		List<User> users = new ArrayList<>();
+		try (Connection connection = getConnection();
+				// Step 5.1: Create a statement using connection object
+				PreparedStatement preparedStatement = connection.prepareStatement(SELECT_ALL_USERS);) {
+			// Step 5.2: Execute the query or update query
+			ResultSet rs = preparedStatement.executeQuery();
+			// Step 5.3: Process the ResultSet object.
+			while (rs.next()) {
+				String name = rs.getString("name");
+				String password = rs.getString("password");
+				String email = rs.getString("email");
+				users.add(new User(name, password, email));
+			}
+		} catch (SQLException e) {
+			System.out.println(e.getMessage());
+		}
+		// Step 5.4: Set the users list into the listUsers attribute to be pass to the
+		// userManagement.jsp
+		request.setAttribute("listUsers", users);
+		request.getRequestDispatcher("/userManagement.jsp").forward(request, response);
 	}
 
 	/**
