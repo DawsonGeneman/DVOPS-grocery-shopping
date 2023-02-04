@@ -109,9 +109,7 @@ public class UserServlet extends HttpServlet {
 			case "/UserServlet/update":
 				updateUser(request, response);
 				break;
-			case "/update":
-				break;
-			default:
+			case "/UserServlet/dashboard":
 				listUsers(request, response);
 				break;
 
