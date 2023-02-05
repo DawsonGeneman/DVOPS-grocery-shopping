@@ -49,7 +49,7 @@
 							class="fa fa-shopping-basket"></span>Products</a></li>
 					<li class="nav-item"><a class="nav-link" href="contactUs.jsp"><span
 							class="fa fa-phone"></span>Contact Us</a></li>
-					<li class="nav-item" style="margin-right: 33em;"><a
+					<li class="nav-item" style="margin-right: 30em;"><a
 						class="nav-link" href="aboutus.jsp"><span
 							class="fa fa-info-circle"></span>About Us</a></li>
 					<li class="nav-item" id="navUser"><a class="nav-link" href="#"
